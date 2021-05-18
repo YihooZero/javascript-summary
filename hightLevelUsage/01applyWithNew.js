@@ -14,7 +14,11 @@ function newCall1(Cls) {
   // return new (Cls.bind.apply(Cls, arguments));
   // if you know that Cls.bind has not been overwritten
 }
+var s = newCall(Something, a, b, c);
 
+var s = new (Function.prototype.bind.call(Something, null, a, b, c));
+
+var s = new (Function.prototype.bind.apply(Something, [null, a, b, c]));
 
 // 解决办法二
 var createSomething2 = (function() {
