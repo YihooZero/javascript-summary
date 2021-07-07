@@ -1,3 +1,11 @@
+/**
+ * 排序算法
+ * 参考文章
+ * https://www.section.io/engineering-education/sorting-algorithms-in-js/
+ * https://juejin.cn/post/6844903444365443080
+ * https://juejin.cn/post/6844903609885261832
+ */
+
 // 方法一：sort 方法进行排序
 var numArray = [140000, 104, 99];
 numArray.sort(function(a, b) {
@@ -18,9 +26,6 @@ console.log(numArray);
  * 2、对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数；
  * 3、针对所有的元素重复以上的步骤，除了最后一个；
  * 4、重复步骤1-3，直到排序完成。
- *
- * 参考文章
- * https://www.section.io/engineering-education/sorting-algorithms-in-js/
  */
 function bubbleSort(arr){
   //Outer pass
