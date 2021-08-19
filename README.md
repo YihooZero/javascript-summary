@@ -10,3 +10,7 @@
 
 - [`apply()` 与 `new` 运算符配合使用](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/01applyWithNew.js)
 
+#### 4.模拟实现
+
+- ​	[Promise.finally](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/PromiseFinally.js)
+
