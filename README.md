@@ -14,3 +14,5 @@
 
 - ​	[Promise.finally](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/PromiseFinally.js)
 
+#### 5.面向对象
+
