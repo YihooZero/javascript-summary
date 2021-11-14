@@ -16,4 +16,12 @@
 
 #### 5.面向对象
 
-1. 理解对象
+- 理解对象
+
+- 创建对象
+
+  1. [工厂模式](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/02objectCreation/01factoryPattern.js)
+
+     优点：解决了创建多个相似对象的问题
+
+     缺点：没有解决对象的识别问题(怎样知道一个对象的类型)
