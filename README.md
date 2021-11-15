@@ -28,7 +28,7 @@
      
   2. [构造函数模式](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/02objectCreation/02constructorPattern.js)
   
-     构造函数模式 `vs` 工厂模式
+     **构造函数模式 `vs` 工厂模式**
   
      - 没有显示地创建对象
      - 直接将属性和方法赋给了`this`对象
@@ -36,11 +36,38 @@
   
      ------
   
-     以 `new` 方式调用构造函数会经历以下步骤
+     **以 `new` 方式调用构造函数会经历以下步骤**
   
      1. 创建（构造）一个新对象
      2. 这个新对象会被执行`[[prototype]]`连接
      3. 将构造函数的作用域赋给新对象（`this`就指向了这个新对象）
      4. 执行构造函数中的代码（为这个新对象添加属性）
      5. 如果函数没有返回其他**对象**，那么`new`表达式中的函数调用会自动返回这个新对象
-
+  
+     ------
+  
+     **构造函数的问题**
+  
+     每个方法都要在每个实例上重新创建一遍
+  
+     ```javascript
+     function Person(name, age, job){
+      this.name = name;
+      this.age = age;
+      this.job = job;
+      // this.sayName = function() {
+      //   alert(this.name)
+      //	}
+      this.sayName = new Function(“alert(this.name)”); //与声明函数在逻辑上是等价的 
+     }
+     var person1 = new Person('Nicholas', 29, 'Software Engineer');
+     var person2 = new Person('Greg', 27, 'Doctor');
+     ```
+  
+     > person1和person2都有一个名为sayName()的方法，但这两个方法不是同一个Function的实例。每个Person实例都包含一个不同的Function实例。以这种方式创建函数，不同实例上的同名函数是不相等的
+  
+     ```javascript
+     console.log(person1.sayName === person2.sayName); // false
+     ```
+  
+     
