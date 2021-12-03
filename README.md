@@ -3,6 +3,7 @@
 
 - [数组去重](https://github.com/YihooZero/javascript-summary/blob/main/methods/01ArrayDeduplication.js)
 - [排序算法](https://github.com/YihooZero/javascript-summary/blob/main/methods/02SortingAlgorithms.js)
+- [查找树形结构所有的父节点](https://github.com/YihooZero/javascript-summary/blob/main/methods/03FindParentNodes.js)
 
 #### 2.技巧
 
