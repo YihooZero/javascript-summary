@@ -59,7 +59,7 @@
       // this.sayName = function() {
       //   alert(this.name)
       //	}
-      this.sayName = new Function(“alert(this.name)”); //与声明函数在逻辑上是等价的 
+      this.sayName = new Function("alert(this.name)"); //与声明函数在逻辑上是等价的 
      }
      var person1 = new Person('Nicholas', 29, 'Software Engineer');
      var person2 = new Person('Greg', 27, 'Doctor');
@@ -71,4 +71,9 @@
      console.log(person1.sayName === person2.sayName); // false
      ```
   
-     
+  3. [原型模式](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/02objectCreation/03prototypePattern.js)
+  
+     - 理解原型对象
+  
+       当调用构造函数创建一个新实例后，该实例的内部将包含一个指针(内部属性)，指向构造函数的原型对象
+
