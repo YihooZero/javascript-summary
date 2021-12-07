@@ -1,4 +1,4 @@
-//集合示意图传送门：https://github.com/YihooZero/javascript-summary/blob/main/imgs/gather.jpg
+//集合示意图传送门：https://github.com/YihooZero/javascript-summary/blob/main/imgs/methods-04.jpg
 //第一：数组取交集-->lodash.intersection
 const array1 = [{ name: 'a', id: 1 }, { name: 'b', id: 2 }, { name: 'c', id: 3 }];
 const array2 = [{ name: 'b', id: 2 }, { name: 'c', id: 3 }, { name: 'd', id: 4 }];
