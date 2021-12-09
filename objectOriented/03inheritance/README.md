@@ -150,6 +150,63 @@
 
    组合继承避免了原型链和借用构造函数的缺陷，融合了它们的优点，成为 `JavaScript` 中最常用的继承模式。而且， `instanceof` 和 `isPrototypeOf()`也能够用于识别基于组合继承创建的对象。
 
+   不足：不论在什么情况下，都会调用两次超类型构造函数：一次是在创建子类型原型的时候，另一次是在子类型构造函数内部
+
+   ```javascript
+   function SuperType(name){ 
+    this.name = name; 
+    this.colors = ["red", "blue", "green"]; 
+   } 
+   
+   SuperType.prototype.sayName = function(){ 
+    alert(this.name); 
+   }; 
+   
+   function SubType(name, age){ 
+    SuperType.call(this, name);         //第二次调用 SuperType() 
+    
+    this.age = age; 
+   } 
+   SubType.prototype = new SuperType(); //第一次调用 SuperType() 
+   
+   SubType.prototype.constructor = SubType; 
+   SubType.prototype.sayAge = function(){ 
+    alert(this.age); 
+   }; 
+   ```
+
+   
+
 4. [原型式继承](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/03inheritance/04PrototypalInheritance.js)
 
    基本思想：借助原型可以基于已有的对象创建新对象，同时还不必因此创建自定义类型
+   
+   `ECMAScript 5` 通过新增 `Object.create()`方法规范化了原型式继承。在传入一个参数的情况下， `Object.create()`与 `object()`方法的行为相同。
+   
+5. [寄生式继承](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/03inheritance/05ParasiticInheritance.js)
+
+   基本思想：创建一个仅用于封装继承过程的函数，该函数在内部以某种方式来增强对象，最后再像真地是它做了所有工作一样返回对象
+
+   不足：使用寄生式继承来为对象添加函数，会由于不能做到函数复用而降低效率；这一点与构造函数模式类似。
+
+6. [寄生组合式继承](https://github.com/YihooZero/javascript-summary/blob/main/objectOriented/03inheritance/06ParasiticCombinationInheritance.js)
+
+   为了解决组合继承调用两次超类型构造函数
+
+   基本思想：不必为了指定子类型的原型而调用超类型的构造函数，我们所需要的无非就是超类型原型的一个副本而已。本质上，就是使用寄生式继承来继承超类型的原型，然后再将结果指定给子类型的原型。
+
+   ```javascript
+   function object(o){
+     function F(){}
+     F.prototype = o;
+     return new F();
+   }
+   
+   function inheritPrototype(subType, superType){ 
+     var prototype = object(superType.prototype); // 创建对象
+     prototype.constructor = subType;             // 增强对象
+     subType.prototype = prototype;               // 指定对象
+   } 
+   ```
+
+   **为寄生组合式继承是引用类型最理想的继承范式**
