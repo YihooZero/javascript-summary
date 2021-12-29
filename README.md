@@ -8,6 +8,8 @@
 
 #### 2.技巧
 
+- [创建自定义长度数组](https://github.com/YihooZero/javascript-summary/blob/main/skills/01createArrayByLength.js)
+
 #### 3.高阶用法
 
 - [`apply()` 与 `new` 运算符配合使用](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/01applyWithNew.js)
