@@ -13,6 +13,7 @@
 #### 3.高阶用法
 
 - [`apply()` 与 `new` 运算符配合使用](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/01applyWithNew.js)
+- [Proxy 实现观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/02observeWithProxy.js)
 
 #### 4.模拟实现
 
