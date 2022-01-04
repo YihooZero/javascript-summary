@@ -1,14 +1,12 @@
 // 发布订阅模式
 // https://segmentfault.com/a/1190000019722065
+// 比对https://github.com/YihooZero/learn-javascript-design-patterns/blob/main/chapter17/01.js
 // 事件中心
 let pubSub = {
   list: {},
   subscribe: function (key, fn) {   // 订阅
     if (!this.list[key]) {
-      // this.list[key] = [];
-      // TODO: 这里是否需要加fn?待确认
-      // 参照https://github.com/YihooZero/learn-javascript-design-patterns/blob/main/charpter17/01.js
-      this.list[key] = [fn];
+      this.list[key] = [];
     }
     this.list[key].push(fn);
   },
@@ -17,7 +15,7 @@ let pubSub = {
       fn.call(this, ...arg);
     }
   },
-  unSubscribe: function (key, fn) {     // 取消订阅
+  unSubscribe: function (key, fn) { // 取消订阅
     let fnList = this.list[key];
     if (!fnList) return false;
 
