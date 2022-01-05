@@ -16,7 +16,8 @@
 - [Proxy 实现观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/02observeWithProxy.js)
 - [观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/03observePattern.js)
 - [发布订阅模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/04publishSubscribePattern.js)
-- [Promise顺序执行](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/05PromiseSequentialExecution.js)
+- [Promise并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/05PromiseSequentialExecution.js)
+- [asyncAwait并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/06AsyncAwaitSequentialExecution.js)
 
 #### 4.模拟实现
 
