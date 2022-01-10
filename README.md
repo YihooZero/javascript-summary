@@ -12,12 +12,13 @@
 
 #### 3.高阶用法
 
-- [`apply()` 与 `new` 运算符配合使用](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/01applyWithNew.js)
-- [Proxy 实现观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/02observeWithProxy.js)
-- [观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/03observePattern.js)
-- [发布订阅模式](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/04publishSubscribePattern.js)
-- [Promise并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/05PromiseSequentialExecution.js)
-- [asyncAwait并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/hightLevelUsage/06AsyncAwaitSequentialExecution.js)
+- [`apply()` 与 `new` 运算符配合使用](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/01applyWithNew.js)
+- [Proxy 实现观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/02observeWithProxy.js)
+- [观察者模式](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/03observePattern.js)
+- [发布订阅模式](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/04publishSubscribePattern.js)
+- [Promise并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/05PromiseSequentialExecution.js)
+- [asyncAwait并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/06AsyncAwaitSequentialExecution.js)
+- [函数柯里化](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/07Curry.js)
 
 #### 4.模拟实现
 
