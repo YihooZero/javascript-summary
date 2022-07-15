@@ -19,6 +19,7 @@
 - [Promise并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/05PromiseSequentialExecution.js)
 - [asyncAwait并发顺序完成异步操作](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/06AsyncAwaitSequentialExecution.js)
 - [函数柯里化](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/07Curry.js)
+- [apply链接构造器](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/08ApplyToChainConstructors.js)
 
 #### 4.模拟实现
 
