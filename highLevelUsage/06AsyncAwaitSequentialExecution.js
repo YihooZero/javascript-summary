@@ -1,4 +1,4 @@
-// 参照hightLevelUsage/05PromiseSequentialExecution.js
+// 参照highLevelUsage/05PromiseSequentialExecution.js
 // Promise vs async...await
 
 async function logInOrder(urls) {
