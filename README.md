@@ -26,6 +26,7 @@
 #### 4.模拟实现
 
 - [Promise.finally](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/PromiseFinally.js)
+- [Function.prototype.bind](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/FuntionBind.js)
 
 #### 5.面向对象
 
