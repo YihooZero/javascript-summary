@@ -9,6 +9,7 @@
 #### 2.技巧
 
 - [创建自定义长度数组](https://github.com/YihooZero/javascript-summary/blob/main/skills/01createArrayByLength.js)
+- [number类型位运算符>>1妙用](https://github.com/YihooZero/javascript-summary/blob/main/skills/02rightShift.js)
 
 #### 3.高阶用法
 
