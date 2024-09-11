@@ -1,8 +1,8 @@
 Function.prototype.before = function(beforeFn) {
   const _this = this
   return function() {
-    beforeFn(this, arguments)
-    _this.apply(this, arguments)
+    beforeFn.apply(this, arguments)
+    return _this.apply(this, arguments)
   }
 }
 
@@ -15,14 +15,17 @@ Function.prototype.after = function(afterFn) {
   }
 }
 
-let func = function() {
-  console.log(2)
+const fn = function (p1, p2) {
+  console.log('sum:', p1 + p2)
+  return p1 + p2
 }
 
-func = func.before(function() {
-  console.log(1)
-}).after(function() {
-  console.log(3)
+const decoratorFn = fn.before(function (b1, b2) {
+  console.log('before:', b2 - b1)
+  return b2 - b1
+}).after(function (a1, a2) {
+  console.log('after:', a1 * a2)
+  return a1 * a2
 })
 
-func()
+console.log(decoratorFn(2,4))
