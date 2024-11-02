@@ -23,6 +23,7 @@
 - [apply链接构造器](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/08ApplyToChainConstructors.js)
 - [`AOP`(面向切面编程)装饰函数](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/09DecoratorPattern.js)
 - [`try...catch`实现多次重复尝试](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/10Retries.js)
+- [连续请求获取最新结果](https://github.com/YihooZero/javascript-summary/blob/main/highLevelUsage/11ContinuousRequestsToGetTheLatestResults.js)
 
 #### 4.模拟实现
 
