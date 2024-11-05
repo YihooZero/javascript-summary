@@ -28,6 +28,7 @@
 
 - [Promise.finally](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/PromiseFinally.js)
 - [Function.prototype.bind](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/FuntionBind.js)
+- [Promise.all](https://github.com/YihooZero/javascript-summary/blob/main/polyfill/PromiseAll.js)
 
 #### 5.面向对象
 
