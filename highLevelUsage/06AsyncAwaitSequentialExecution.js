@@ -1,16 +1,21 @@
 // 参照highLevelUsage/05PromiseSequentialExecution.js
 // Promise vs async...await
 
-async function logInOrder(urls) {
-  // 并发读取远程URL
-  const textPromises = urls.map(async url => {
-    const response = await fetch(url);
-    return response.text();
+function asyncFn(id) {
+  return new Promise(resolve => {
+    setTimeout(resolve, 2000*id, id)
+  })
+}
+
+async function logInOrder(ids) {
+  const textPromises = ids.map(id => {
+    return asyncFn(id).then(response => response);
   });
 
   // 按次序输出
   for (const textPromise of textPromises) {
     console.log(await textPromise);
+    // output: 2 1 4 3
   }
 
   // NOTE: forEach 并不会按照次序输出，有两种说法
@@ -20,5 +25,9 @@ async function logInOrder(urls) {
   // 详见：https://es6.ruanyifeng.com/#docs/async
   textPromises.forEach(async textPromise => {
     console.log(await textPromise)
+    // output: 1 2 3 4
   })
 }
+
+logInOrder([2, 1, 4, 3])
+
