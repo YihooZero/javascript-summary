@@ -11,10 +11,17 @@ function logInOrder(ids) {
   });
 
   // 按次序输出
+  // method1
+  // textPromises.reduce((chain, textPromise) => {
+  //   return chain.then(() => textPromise)
+  //     .then(text => console.log(text));
+  // }, Promise.resolve());
+  
+  // method2
+  // 参照https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#%E7%A4%BA%E4%BE%8B
   textPromises.reduce((chain, textPromise) => {
-    return chain.then(() => textPromise)
-      .then(text => console.log(text));
-  }, Promise.resolve());
+    return chain.then(() => textPromise.then(console.log))
+  }, Promise.resolve())
 }
 
 logInOrder(['1','2','3','4'])
